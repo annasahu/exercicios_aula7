@@ -10,25 +10,31 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  num soma = 0;
+  double _soma = 1+2+3+4+5+6+7+8+9+10;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      child: Text('Soma cumulativa $soma'),
-      onTap: () {
-        setState(() {
-          
-        });
-      },
-    );
-  }
-}
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.pink.shade300,
+        title: const Text("Soma 1 a 10"),
+      ),
+      body: Container(
+        //ALINHAMENTO DOS WIDGETS
+        alignment: Alignment.center,
+        padding: const EdgeInsets.all(12.0),
 
-Function somatoria() {
-  int i = 0;
-  int soma = 0;
-  for (i = 1; i <= 10; i++) {
-    soma += soma;
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text("Somatória de todos os inteiros de 1 a 10:",
+                style: TextStyle(fontSize: 25, color: Colors.black)),
+            SizedBox(height: 20),
+            Text("$_soma",
+                style: TextStyle(fontSize: 25, color: Colors.black)),
+          ],
+        ),
+      ),
+    );
   }
 }
