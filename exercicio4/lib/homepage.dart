@@ -17,7 +17,7 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.pink.shade300,
-        title: const Text("Soma 1 a 10"),
+        title: const Text("Soma par 1 a 10"),
       ),
       body: Container(
         //ALINHAMENTO DOS WIDGETS
@@ -27,7 +27,7 @@ class HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Somatória de todos os inteiros de 1 a 10:",
+            Text("Somatória de todo número par de 1 a 10:",
                 style: TextStyle(fontSize: 25, color: Colors.black)),
             SizedBox(height: 20),
             Text("$_soma",
